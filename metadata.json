@@ -1,0 +1,7 @@
+{
+  "name": "Copy of CSTlendar V0219-0126",
+  "description": "稳定版1",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

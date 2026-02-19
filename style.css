@@ -1,0 +1,62 @@
+
+/* 全局基礎設置 */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: #ffffff; /* 乾淨的白色背景 */
+  margin: 0;
+  padding: 0;
+  /* 防止 iOS 橡皮筋效應 */
+  overscroll-behavior-y: none;
+  /* 確保高度填充全屏 */
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  /* 適配劉海屏與安全區域 */
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* 移除模擬器容器居中邏輯 */
+#root {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+/* 移動端點擊優化 */
+button, 
+[role="button"],
+.cursor-pointer {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+/* 隱藏滾動條 */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* 垂直文本排版 */
+.vertical-text {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+/* 強制隱藏數字輸入框調節箭頭 */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none !important;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield !important;
+}
+
+/* 確保輸入框在全寬度下不變形 */
+input[type="date"], input[type="time"] {
+  min-width: 0;
+}
